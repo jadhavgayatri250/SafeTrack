@@ -1,6 +1,5 @@
 # SafeTrack
-
-SafeTrack is a Women Safety SOS Alert and Nearest Helpdesk Locator developed using CodeIgniter 4 and MySQL.
+SafeTrack is a Women Safety Web Application developed using CodeIgniter 4 and MySQL.
 
 ## Features
 - User Registration and Login
