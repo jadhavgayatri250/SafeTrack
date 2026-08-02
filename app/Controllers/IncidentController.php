@@ -16,7 +16,10 @@ class IncidentController extends BaseController
     {
         $model = new IncidentModel();
 
-        $user = session()->get('user')['name'] ?? 'User';
+        $sessionUser = session()->get('user');
+
+        $user = $sessionUser['name'] ?? 'User';
+        $userEmail = $sessionUser['email'] ?? '';
         $latitude = $this->request->getPost('latitude');
         $longitude = $this->request->getPost('longitude');
         $pincode = $this->request->getPost('pincode');
@@ -30,7 +33,7 @@ class IncidentController extends BaseController
 ]);
         $email = \Config\Services::email();
 
-        $email->setTo('jadhavgayatri250@gmail.com');
+        $email->setTo($userEmail);
         $email->setSubject('🚨 SafeTrack SOS Alert');
 
         $email->setMessage("
