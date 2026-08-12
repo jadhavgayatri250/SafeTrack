@@ -9,6 +9,7 @@
 <title>SafeTrack | Women Safety</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
 <style>
@@ -138,6 +139,24 @@ body{
     color:#fff !important;
 }
 
+
+
+.btn-admin{
+    background:#212529 !important;
+    color:#fff !important;
+    border:2px solid #212529 !important;
+}
+
+.btn-admin i{
+    color:#fff !important;
+}
+
+.btn-admin:hover{
+    background:#000 !important;
+    color:#fff !important;
+    transform:translateY(-3px);
+}
+
 @media(max-width:768px){
 
 .hero{
@@ -173,30 +192,59 @@ body{
 
 </head>
 
+
 <body>
+
 
 <nav class="navbar navbar-expand-lg">
 
 <div class="container">
 
 <a class="navbar-brand" href="/">
-SafeTrack
+    SafeTrack
 </a>
 
-<button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
+
+<button
+    class="navbar-toggler bg-white"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#menu"
+>
+    <span class="navbar-toggler-icon"></span>
 </button>
+
 
 <div class="collapse navbar-collapse" id="menu">
 
 <ul class="navbar-nav ms-auto">
 
 <li class="nav-item">
-<a class="nav-link" href="/login">Login</a>
+
+<a class="nav-link" href="/login">
+    Login
+</a>
+
 </li>
 
+
 <li class="nav-item">
-<a class="nav-link" href="/register">Register</a>
+
+<a class="nav-link" href="/register">
+    Register
+</a>
+
+</li>
+
+
+
+<li class="nav-item">
+
+<a class="nav-link" href="/admin/login">
+    Admin Login
+
+</a>
+
 </li>
 
 </ul>
@@ -206,30 +254,64 @@ SafeTrack
 </div>
 
 </nav>
+
+
+
+
 <section class="hero">
 
 <div class="container">
 
-<h1>SafeTrack</h1>
+<h1>
+    SafeTrack
+</h1>
+
 
 <p>
-Women Safety SOS Alert &<br>
-Nearest Helpdesk Locator
+
+    Women Safety SOS Alert &<br>
+
+    Nearest Helpdesk Locator
+
 </p>
 
-<a href="/login" class="btn btn-light btn-custom">
-Login
+
+
+<a
+    href="/login"
+    class="btn btn-light btn-custom"
+>
+    Login
 </a>
 
-<a href="/register" class="btn btn-outline-light btn-custom">
-Register
+
+
+<a
+    href="/register"
+    class="btn btn-outline-light btn-custom"
+>
+    Register
 </a>
+
+
+<a
+    href="/admin/login"
+    class="btn btn-admin btn-custom"
+>
+    Admin Login
+</a>
+
 
 </div>
 
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
 </body>
+
 </html>
