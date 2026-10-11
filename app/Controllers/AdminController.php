@@ -100,6 +100,30 @@ class AdminController extends BaseController
         ]);
     }
 
+    public function userDetails($id)
+    {
+        $authCheck = $this->checkAdminAuth();
+
+        if ($authCheck !== null) {
+            return $authCheck;
+        }
+
+        $userModel = new \App\Models\UserModel();
+
+        $user = $userModel
+            ->select('id, name, email')
+            ->find($id);
+
+        if (!$user) {
+            return redirect()->to('/admin/users')
+                ->with('error', 'User not found.');
+        }
+
+        return view('admin/user_details', [
+            'user' => $user
+        ]);
+    }
+
     
     public function incidents()
     {

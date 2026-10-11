@@ -36,6 +36,8 @@ $routes->get('admin/dashboard', 'AdminController::dashboard');
 
 $routes->get('admin/users', 'AdminController::users');
 
+$routes->get('admin/users/view/(:num)', 'AdminController::userDetails/$1');
+
 $routes->get('admin/incidents', 'AdminController::incidents');
 
 $routes->get('admin/incidents/(:num)', 'AdminController::incidentDetails/$1');
